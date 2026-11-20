@@ -1,0 +1,7 @@
+TASK 2 PACKET TRACER BUILD
+Devices: 3 hubs (Hub0-Hub2), 1 central 24-port switch (SW1), 1 router (R1), 1 second switch (SW2), 12 IP phones (or generic end devices representing phones).
+Connect 8 PCs to each hub; each hub to SW1; SW1 to R1 G0/0; R1 G0/1 to SW2; connect 12 phones to SW2.
+Use copper straight-through for PC/hub/switch/router Ethernet links. In Packet Tracer, wait for links to turn green.
+Mark: 3 hub collision segments + SW1-to-R1 link + R1-to-SW2 link + 12 phone switch ports = 17 collision domains. Router interfaces create 2 broadcast domains.
+Alternative: replace each hub with an access switch. Each PC-to-access-switch port is its own collision domain: 24 PC links + 3 access-switch uplinks + 1 SW1-router + 1 router-SW2 + 12 phone links = 41. Broadcast domains remain 2.
+Save as office.pkt. Use File > Save As. Take a screenshot showing the complete topology and labels.

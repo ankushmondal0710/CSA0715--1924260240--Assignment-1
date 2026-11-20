@@ -1,0 +1,8 @@
+TASK 6 - Linux evidence
+Before: sudo ethtool eth0
+Correct preferred configuration: enable auto-negotiation at both ends (PC NIC and switch port):
+sudo ethtool -s eth0 autoneg on
+Then verify: sudo ethtool eth0
+If the network administrator deliberately chooses forced settings, both ends must be set identically, e.g. 100 Mb/s full duplex with autonegotiation disabled; do not force only one end.
+Counters: ip -s link show eth0
+Note: ethtool settings may reset after reboot; persistent configuration depends on NetworkManager/netplan/distribution.

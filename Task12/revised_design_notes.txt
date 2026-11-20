@@ -1,0 +1,5 @@
+TASK 12 - CHANGE CONTROL
+The assignment gives 50 AGVs but does not give each AGV's packet size, reporting frequency, or total 5G cell capacity. State assumptions rather than inventing measured facts.
+Illustrative assumption only: same traffic as one robot controller (200 bytes every 2 ms) -> 0.8 Mbps per AGV -> 40 Mbps for 50 AGVs. If this assumption is not accepted, replace it with measured/vendor traffic.
+Use private 5G URLLC for AGV mobility and keep fixed robot control on deterministic wired industrial Ethernet where possible. Wi-Fi 6 remains for office/general data; fibre remains the backbone. Validate cell capacity, coverage, handover, queueing and end-to-end deadline with a real test.
+For 1.2 km at 300 m per 5G cell, assume 4 coverage areas and 3 handovers: 3 x 20 ms = 60 ms aggregate interruption across the trip, not a guarantee that each command misses its deadline. A 20 ms handover exceeds a 10 ms command deadline if a command is required during the interruption; design buffering/redundant coverage/application safety behavior and test it.

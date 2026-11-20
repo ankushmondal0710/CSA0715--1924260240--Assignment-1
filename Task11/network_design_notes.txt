@@ -1,0 +1,9 @@
+TASK 11 DESIGN RECOMMENDATION
+- Robot cells: industrial Ethernet over shielded Cat6A for short runs where EMI is controlled; fibre where electrical isolation/noise immunity is needed. Use managed industrial switches, VLAN segmentation, QoS priority for control traffic, and redundant paths where required.
+- Shop-floor backbone and data-centre runs: fibre. The 140 m and 550 m runs exceed the usual 100 m copper Ethernet channel limit.
+- Office: Wi-Fi 6 access points plus wired Ethernet for fixed endpoints.
+- CCTV: wired Ethernet/fibre, local recording, separate VLAN and rate control.
+- Sensors: wired industrial Ethernet/fieldbus for critical high-rate measurements; low-rate remote sensors may use suitable low-power wireless after capacity and reliability validation.
+- AGVs: private 5G URLLC subject to coverage, handover, capacity, redundancy and end-to-end latency testing. Do not promise a 10 ms deadline from a nominal radio handover figure alone.
+- Head office 400 km: single-mode fibre leased service; use sliding-window transport. For 1 Gbps, 1500-byte frames and 2e8 m/s propagation, a≈166.67 and ideal minimum window≈334.
+- Error control: Ethernet FCS/CRC for link error detection; application/transport acknowledgements and retransmission where latency permits; FEC for time-sensitive wireless/video where retransmission delay is costly.

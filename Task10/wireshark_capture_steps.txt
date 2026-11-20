@@ -1,0 +1,7 @@
+TASK 10 - Wireshark evidence
+1. Open Wireshark and select the active interface.
+2. Start capture. Generate permitted traffic: ping your router or a public test host; open a website you normally use.
+3. Stop capture. Select an Ethernet II / IPv4 / TCP or UDP packet.
+4. Expand Ethernet II (Layer 2), Internet Protocol Version 4 (Layer 3), and Transmission Control Protocol or UDP (Layer 4); expand application protocol if present.
+5. Save as Task10/own_capture.pcapng. Take a screenshot with the packet list and expanded headers visible.
+6. Do not use the assignment's illustrative traceroute table as your own measurement. Record actual ping min/avg/max and each traceroute hop from your computer.
